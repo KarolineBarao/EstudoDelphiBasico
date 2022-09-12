@@ -1,0 +1,160 @@
+unit U_Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TFormInicial = class(TForm)
+    edt_Visor: TEdit;
+    btn_9: TSpeedButton;
+    btn_8: TSpeedButton;
+    btn_7: TSpeedButton;
+    btn_5: TSpeedButton;
+    btn_4: TSpeedButton;
+    btn_6: TSpeedButton;
+    btn_3: TSpeedButton;
+    btn_1: TSpeedButton;
+    btn_2: TSpeedButton;
+    btn_0: TSpeedButton;
+    btn_divisao: TSpeedButton;
+    btn_Multiplicacao: TSpeedButton;
+    btn_Subtracao: TSpeedButton;
+    btn_Adicao: TSpeedButton;
+    btn_Clear: TSpeedButton;
+    btn_Resultado: TSpeedButton;
+    procedure btn_0Click(Sender: TObject);
+    procedure btn_1Click(Sender: TObject);
+    procedure btn_2Click(Sender: TObject);
+    procedure btn_3Click(Sender: TObject);
+    procedure btn_4Click(Sender: TObject);
+    procedure btn_5Click(Sender: TObject);
+    procedure btn_6Click(Sender: TObject);
+    procedure btn_7Click(Sender: TObject);
+    procedure btn_8Click(Sender: TObject);
+    procedure btn_9Click(Sender: TObject);
+    procedure btn_ClearClick(Sender: TObject);
+    procedure btn_AdicaoClick(Sender: TObject);
+    procedure btn_SubtracaoClick(Sender: TObject);
+    procedure btn_MultiplicacaoClick(Sender: TObject);
+    procedure btn_divisaoClick(Sender: TObject);
+  private
+    { Private declarations }
+  var
+    valor: Double;
+    funcao: char;
+  public
+    { Public declarations }
+  end;
+
+var
+  FormInicial: TFormInicial;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormInicial.btn_0Click(Sender: TObject);
+begin
+  // botão zero
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_1Click(Sender: TObject);
+begin
+  // botão Um
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_2Click(Sender: TObject);
+begin
+  // botão 2
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_3Click(Sender: TObject);
+begin
+  // botão três
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_4Click(Sender: TObject);
+begin
+  // botão quatro
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_5Click(Sender: TObject);
+begin
+  // botão 5
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_6Click(Sender: TObject);
+begin
+  // botão seis
+
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_7Click(Sender: TObject);
+begin
+  // botão sete
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_8Click(Sender: TObject);
+begin
+  // botão oito
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_9Click(Sender: TObject);
+begin
+  // botão nove
+  edt_Visor.Text := edt_Visor.Text + TSpeedButton(Sender).Caption;
+end;
+
+procedure TFormInicial.btn_AdicaoClick(Sender: TObject);
+begin
+  valor := StrToFloat(edt_Visor.Text);
+  edt_Visor.Clear;
+
+  funcao := 'a';
+
+end;
+
+procedure TFormInicial.btn_ClearClick(Sender: TObject);
+begin
+  edt_Visor.Clear;
+end;
+
+procedure TFormInicial.btn_divisaoClick(Sender: TObject);
+begin
+valor := StrToFloat(edt_Visor.Text);
+edt_Visor.Clear;
+
+funcao:='d';
+end;
+
+procedure TFormInicial.btn_MultiplicacaoClick(Sender: TObject);
+begin
+valor := StrToFloat(edt_Visor.Text);
+edt_Visor.Clear;
+
+funcao:='m';
+end;
+
+procedure TFormInicial.btn_SubtracaoClick(Sender: TObject);
+begin
+  valor := StrToFloat(edt_Visor.Text);
+  edt_Visor.Clear;
+
+  funcao := 's';
+
+end;
+
+end.

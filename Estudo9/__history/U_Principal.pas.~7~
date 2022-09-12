@@ -1,0 +1,80 @@
+unit U_Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TFormInicial = class(TForm)
+    edt_Visor: TEdit;
+    btn_9: TSpeedButton;
+    btn_8: TSpeedButton;
+    btn_7: TSpeedButton;
+    btn_5: TSpeedButton;
+    btn_4: TSpeedButton;
+    btn_6: TSpeedButton;
+    btn_3: TSpeedButton;
+    btn_1: TSpeedButton;
+    btn_2: TSpeedButton;
+    btn_0: TSpeedButton;
+    btn_divisao: TSpeedButton;
+    btn_Multiplicacao: TSpeedButton;
+    btn_Subtracao: TSpeedButton;
+    btn_Adicao: TSpeedButton;
+    btn_Clear: TSpeedButton;
+    btn_Resultado: TSpeedButton;
+    procedure btn_0Click(Sender: TObject);
+    procedure btn_1Click(Sender: TObject);
+    procedure btn_2Click(Sender: TObject);
+    procedure btn_3Click(Sender: TObject);
+    procedure btn_4Click(Sender: TObject);
+  private
+    { Private declarations }
+  var
+    valor: Double;
+    funcao: char;
+  public
+    { Public declarations }
+  end;
+
+var
+  FormInicial: TFormInicial;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormInicial.btn_0Click(Sender: TObject);
+begin
+  // botão zero
+  edt_Visor.Text := edt_Visor.Text + '0';
+end;
+
+procedure TFormInicial.btn_1Click(Sender: TObject);
+begin
+//botão Um
+edt_Visor.Text := edt_Visor.Text + '1';
+end;
+
+procedure TFormInicial.btn_2Click(Sender: TObject);
+begin
+//botão 2
+edt_Visor.Text := edt_Visor.Text + '2';
+end;
+
+procedure TFormInicial.btn_3Click(Sender: TObject);
+begin
+// botão três
+edt_Visor.Text := edt_Visor.Text + '3';
+end;
+
+procedure TFormInicial.btn_4Click(Sender: TObject);
+begin
+//botão quatro
+edt_Visor.Text := edt_Visor.Text + '4';
+end;
+
+end.
